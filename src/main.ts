@@ -5,9 +5,11 @@ import router from "./router";
 import "@inkline/inkline/inkline.scss";
 import "./main.scss";
 
-import { Inkline } from "@inkline/inkline";
+import { Inkline, components } from "@inkline/inkline";
 
 createApp(App)
     .use(router)
-    .use(Inkline)
+    .use(Inkline, {
+        components
+    })
     .mount("#app");
